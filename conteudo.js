@@ -1,7 +1,7 @@
 /* ============================================================
    CONTEÚDO DO SITE INDICO INSIGHTS
-   Este ficheiro é gerado e actualizado pela página de gestão (admin.html).
-   Não precisa de o editar à mão.
+   Gerido pela página de gestão (admin.html). Não precisa de editar à mão.
+   Última actualização: 2026-11-12T15:21:14.633Z
    ============================================================ */
 window.SITE = {
   "defaultLanguage": "pt",
@@ -717,10 +717,10 @@ window.SITE = {
       ]
     },
     {
-      "id": "projectos",
+      "id": "experiencia",
       "menu": {
-        "pt": "Projectos",
-        "en": "Projects"
+        "pt": "Experiência",
+        "en": "Experience"
       },
       "header": {
         "eyebrow": {
@@ -740,7 +740,26 @@ window.SITE = {
       },
       "blocks": [
         {
-          "type": "projects"
+          "type": "projects",
+          "eyebrow": {
+            "pt": "",
+            "en": ""
+          },
+          "title": {
+            "pt": "",
+            "en": ""
+          },
+          "text": {
+            "pt": "",
+            "en": ""
+          },
+          "link": {
+            "label": {
+              "pt": "",
+              "en": ""
+            }
+          },
+          "bg": ""
         }
       ]
     },
@@ -1596,7 +1615,7 @@ window.SITE = {
     }
   ],
   "admin": {
-    "repo": "",
+    "repo": "Credencio/indico",
     "branch": "main"
   }
 };
