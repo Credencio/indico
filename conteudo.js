@@ -1,7 +1,7 @@
 /* ============================================================
    CONTEÚDO DO SITE INDICO INSIGHTS
    Gerido pela página de gestão (admin.html). Não precisa de editar à mão.
-   Última actualização: 2026-11-12T14:44:36.681Z
+   Última actualização: 2026-11-12T14:47:52.800Z
    ============================================================ */
 window.SITE = {
   "defaultLanguage": "pt",
@@ -674,31 +674,6 @@ window.SITE = {
           "title": {
             "pt": "",
             "en": ""
-          },
-          "bg": ""
-        },
-        {
-          "type": "documents",
-          "eyebrow": {
-            "pt": "Nosso Perfil",
-            "en": "Our Profile"
-          },
-          "title": {
-            "pt": "Perfil Institucional da Indico Insights",
-            "en": "Indico Insights Company Profile"
-          },
-          "text": {
-            "pt": "",
-            "en": ""
-          },
-          "filters": false,
-          "limit": "",
-          "link": {
-            "label": {
-              "pt": "",
-              "en": ""
-            },
-            "href": ""
           },
           "bg": ""
         }
