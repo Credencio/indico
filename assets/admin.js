@@ -265,7 +265,7 @@
     hero: { n: "Abertura com slides", d: "Imagem grande no topo, com vários slides", f: [
       { k: "slides", l: "Slides", t: "list", itemName: "Slide", thumb: "image", of: [
         { k: "label", l: "Etiqueta", t: "bi" }, { k: "title", l: "Título", t: "biarea", rows: 2, help: "Palavras entre *asteriscos* ficam a laranja." }, { k: "text", l: "Texto", t: "biarea" },
-        { k: "image", l: "Fotografia de fundo (opcional)", t: "image", folder: "imagens", maxW: 2000, note: "Sem fotografia, aparece o fundo verde animado com o globo." }, btnGroup()] }] },
+        { k: "image", l: "Fotografia de fundo (opcional)", t: "image", folder: "imagens", maxW: 2000, note: "Sem fotografia, aparece o fundo verde animado com o globo." }, { t: "cols", of: [{ k: "credit", l: "Crédito da fotografia (autor · licença)", t: "text", ph: "Foto: Nome · CC BY 4.0" }, { k: "creditLink", l: "Link da fonte (opcional)", t: "url" }] }, btnGroup()] }] },
     bento: { n: "Mosaico de apresentação", d: "Cartão verde com logótipo + 3 cartões", f: [
       { k: "brand", l: "Cartão principal (com logótipo)", t: "group", of: [{ k: "text", l: "Texto", t: "biarea" }, btnGroup()] },
       { k: "tiles", l: "Cartões", t: "list", itemName: "Cartão", of: [{ k: "icon", l: "Ícone", t: "icon" }, { k: "title", l: "Título", t: "bi" }, { k: "text", l: "Texto", t: "biarea" }, { k: "list", l: "Lista com vistos (opcional)", t: "bilist" }] }] },
@@ -276,7 +276,7 @@
       { k: "pillars", l: "Cartões (opcional)", t: "list", itemName: "Cartão", of: [{ k: "icon", l: "Ícone", t: "icon" }, { k: "title", l: "Título", t: "bi" }, { k: "text", l: "Texto", t: "biarea" }] }] },
     services: { n: "Serviços", d: "Mostra a lista de serviços", f: [...headF,
       { t: "cols", of: [{ k: "style", l: "Estilo", t: "select", o: [["grid", "Grelha de cartões"], ["bento", "Mosaico com imagem + painel escuro"]] }, { k: "limit", l: "Mostrar no máximo (vazio = todos)", t: "number" }] },
-      { k: "image", l: "Imagem do mosaico (estilo mosaico)", t: "image", folder: "imagens", maxW: 1400 }, linkF,
+      { k: "image", l: "Imagem do mosaico (estilo mosaico)", t: "image", folder: "imagens", maxW: 1400 }, { t: "cols", of: [{ k: "credit", l: "Crédito da fotografia (autor · licença)", t: "text", ph: "Foto: Nome · CC BY 4.0" }, { k: "creditLink", l: "Link da fonte (opcional)", t: "url" }] }, linkF,
       { k: "cta", l: "Cartão laranja final (estilo grelha)", t: "group", of: [{ k: "title", l: "Título", t: "bi" }, { t: "cols", of: [{ k: "label", l: "Texto do link", t: "bi" }, { k: "link", l: "Leva para", t: "link" }] }] }] },
     checklist: { n: "Faixa de compromisso", d: "Faixa laranja com lista de vistos", f: [
       { k: "title", l: "Título", t: "bi" }, { k: "text", l: "Subtítulo", t: "bi" }, { k: "items", l: "Pontos", t: "bilist" }, btnGroup()] },
@@ -293,7 +293,7 @@
       { k: "left", l: "Cartão verde", t: "group", of: [{ k: "eyebrow", l: "Etiqueta", t: "bi" }, { k: "title", l: "Título", t: "bi" }, { k: "text", l: "Texto", t: "biarea" }] },
       { k: "right", l: "Cartão escuro", t: "group", of: [{ k: "eyebrow", l: "Etiqueta", t: "bi" }, { k: "title", l: "Título", t: "bi" }, { k: "text", l: "Texto", t: "biarea" }, { k: "flow", l: "Sequência de etapas (opcional)", t: "bilist" }] }] },
     tags: { n: "Etiquetas", d: "Lista de competências em pílulas", f: [...headF, { k: "items", l: "Etiquetas", t: "bilist" }] },
-    cta: { n: "Chamada à acção", d: "Faixa verde com título e botão", f: [{ k: "title", l: "Título", t: "bi" }, btnGroup()] },
+    cta: { n: "Chamada à acção", d: "Faixa verde com título e botão", f: [{ k: "title", l: "Título", t: "bi" }, btnGroup(), { k: "image", l: "Fotografia de fundo (opcional)", t: "image", folder: "imagens", maxW: 1800 }, { t: "cols", of: [{ k: "credit", l: "Crédito da fotografia (autor · licença)", t: "text", ph: "Foto: Nome · CC BY 4.0" }, { k: "creditLink", l: "Link da fonte (opcional)", t: "url" }] }] },
     contact: { n: "Formulário de contacto", d: "Formulário + email e morada", f: [{ k: "eyebrow", l: "Etiqueta", t: "bi" }, { k: "title", l: "Título", t: "bi" }, { k: "text", l: "Texto", t: "biarea" }] }
   };
   const commonBlock = [{ k: "bg", l: "Fundo da secção", t: "select", o: [["", "Normal (cinzento claro)"], ["white", "Branco"]] }];
@@ -305,7 +305,7 @@
     { k: "duration", l: "Duração (ex.: 2024 – 2026)", t: "bi" },
     { k: "tags", l: "Áreas (para os filtros)", t: "multi", o: () => S.projectFilters.filter(f => f.value !== "all" && !S.countries[f.value]).map(f => [f.value, tx(f.label)]) },
     { t: "cols", of: [{ k: "live", l: "Sistema em operação", t: "bool" }, { k: "link", l: "Link para o sistema (opcional)", t: "url" }] },
-    { k: "image", l: "Imagem do cartão (opcional — sem imagem aparece um mapa gerado)", t: "image", folder: "imagens", maxW: 1200 },
+    { k: "image", l: "Imagem do cartão (opcional — sem imagem aparece um mapa gerado)", t: "image", folder: "imagens", maxW: 1200 }, { t: "cols", of: [{ k: "credit", l: "Crédito da fotografia (autor · licença)", t: "text", ph: "Foto: Nome · CC BY 4.0" }, { k: "creditLink", l: "Link da fonte (opcional)", t: "url" }] },
     { k: "text", l: "Descrição", t: "biarea", rows: 6 }];
   const DOCUMENT = [
     { k: "cover", l: "Capa", t: "image", pdf: true, cover: true, folder: "documentos/capas", maxW: 700, nameFrom: "title", pagesKey: "pages", empty: "Sem capa" },
@@ -382,7 +382,7 @@
     body.append(el("div", { class: "panel" }, el("h2", {}, "Aba"), fields(pageFields, p, () => { if (isNew && p._autoId !== false) { p.id = slug(tx(p.menu)); idInput.value = p.id; } }),
       el("div", { class: "f", style: "margin-top:1rem" }, el("label", {}, "Endereço da página"), el("div", { class: "help" }, "Aparece no link: site/#endereço. Use só letras, números e hífens."), idInput)));
     const hold = p.header || { eyebrow: { pt: "", en: "" }, title: clone(bi(p.menu)), text: { pt: "", en: "" } };
-    const hf = el("div", { style: p.header ? "" : "display:none" }, fields(headF, hold));
+    const hf = el("div", { style: p.header ? "" : "display:none" }, fields([...headF, { k: "image", l: "Fotografia de fundo do cabeçalho (opcional)", t: "image", folder: "imagens", maxW: 2000 }, { t: "cols", of: [{ k: "credit", l: "Crédito da fotografia (autor · licença)", t: "text", ph: "Foto: Nome · CC BY 4.0" }, { k: "creditLink", l: "Link da fonte (opcional)", t: "url" }] }], hold));
     const hdr = el("div", { class: "panel" }, el("h2", {}, "Cabeçalho da página"), el("p", { class: "hint" }, "Faixa verde no topo da página (a página inicial normalmente usa antes a abertura com slides)."),
       el("label", { class: "check", style: "margin-bottom:1rem" }, el("input", { type: "checkbox", checked: !!p.header, onchange: e => { if (e.target.checked) p.header = hold; else delete p.header; hf.style.display = e.target.checked ? "" : "none"; markDirty(); } }), "Mostrar cabeçalho"));
     hdr.append(hf); body.append(hdr);

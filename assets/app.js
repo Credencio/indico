@@ -49,6 +49,7 @@
   const ic = (k, s = 24, sw = 1.8, cls = "") => `<svg class="${cls}" width="${s}" height="${s}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="${sw}" stroke-linecap="round" stroke-linejoin="round">${ICONS[k] || ICONS.globe}</svg>`;
   const canvas = (opts, cls = "bgcanvas") => `<canvas class="${cls}" data-contour='${JSON.stringify(opts)}'></canvas>`;
   const img = src => src ? `background-image:url('${esc(src)}')` : "";
+  const credit = (c, l) => c ? (l ? `<a class="credit" href="${esc(l)}" target="_blank" rel="noopener">${esc(c)}</a>` : `<span class="credit">${esc(c)}</span>`) : "";
 
   const head = (b, center) => (b.eyebrow || b.title || b.text || b.link) ? `<div class="head ${center ? "center" : ""}"><div>
       ${b.eyebrow ? `<span class="eyebrow ${rv()}">${h(b.eyebrow)}</span>` : ""}
@@ -76,7 +77,7 @@
             ${s.button && t(s.button.label) ? `<a class="btn btn-dark" href="${href(s.button.link)}"${tgt(s.button.link)}>${h(s.button.label)} ${ic("arrow", 18, 2.2)}</a>` : ""}
           </div>
           ${s.image ? "" : `<div class="orbit" aria-hidden="true"><div class="ring"><span class="sat"></span></div><div class="ring r2"></div><div class="core">${canvas({ seed: 9 + i, scale: .03, levels: 10, color: "200,255,220", alpha: .55, anim: i === 0 }, "")}<div class="scan"></div></div></div>`}
-          </div></div>`).join("")}
+          </div>${s.image ? credit(s.credit, s.creditLink) : ""}</div>`).join("")}
         ${slides.length > 1 ? `<div class="hero-dots">${slides.map((_, i) => `<button aria-label="${i + 1}" class="${i ? "" : "on"}"></button>`).join("")}</div>
         <div class="hero-ctrl"><button data-d="-1" aria-label="‹">${ic("left", 20, 2.4)}</button><button data-d="1" aria-label="›">${ic("right", 20, 2.4)}</button></div><div class="hero-bar"></div>` : ""}
       </header>`;
@@ -102,8 +103,8 @@
       const cards = list.map(s => `<article class="svc-card ${rv()}">${ic(s.icon, 30, 1.6, "ic")}<h3>${h(s.title)}</h3><p>${h(s.text)}</p></article>`).join("");
       const cta = b.cta && t(b.cta.title) ? `<a class="svc-card more-card" href="${href(b.cta.link)}"><h3>${h(b.cta.title)}</h3><p><b>${h(b.cta.label)}</b></p></a>` : "";
       if (b.style === "bento") return sec(b, head(b) + `<div class="svc-bento">
-          <div class="svc-visual rv" style="${img(b.image)}">${b.image ? "" : canvas({ seed: 21, scale: .006, levels: 14, color: "200,255,220", alpha: .45, anim: true })}
-            <div class="cap"><span class="pill-label">${lang === "pt" ? "Do satélite ao terreno" : "From satellite to ground"}</span></div></div>
+          <div class="svc-visual rv" style="${img(b.image)}">${b.image ? `<div class="shade-v"></div>` : canvas({ seed: 21, scale: .006, levels: 14, color: "200,255,220", alpha: .45, anim: true })}
+            <div class="cap"><span class="pill-label">${lang === "pt" ? "Do satélite ao terreno" : "From satellite to ground"}</span></div>${b.image ? credit(b.credit, b.creditLink) : ""}</div>
           <div class="svc-panel">${cards}</div></div>`);
       return sec(b, head(b) + `<div class="svc-grid">${cards}${cta}</div>`);
     },
@@ -142,7 +143,7 @@
 
     tags: b => sec(b, head(b) + `<div class="skills ${rv()}">${vis(b.items).map(x => `<span>${h(x)}</span>`).join("")}</div>`),
 
-    cta: b => sec(b, `<div class="ctaband rv">${canvas({ seed: 6, scale: .004, levels: 12, alpha: .5 })}
+    cta: b => sec(b, `<div class="ctaband rv ${b.image ? "withimg" : ""}" style="${img(b.image)}">${b.image ? credit(b.credit, b.creditLink) : canvas({ seed: 6, scale: .004, levels: 12, alpha: .5 })}
         <h2>${md(b.title)}</h2>${b.button && t(b.button.label) ? `<a class="btn btn-sun" href="${href(b.button.link)}">${h(b.button.label)} ${ic("arrow", 18, 2.2)}</a>` : ""}</div>`),
 
     contact: b => {
@@ -193,7 +194,7 @@
     const changed = current !== page.id; current = page.id;
     rvi = 0; stopSlider();
     let html = "";
-    if (page.header) html += `<div class="phero-wrap"><div class="wrap"><header class="phero">${canvas({ seed: page.id.length * 3, scale: .0035, levels: 14, alpha: .35, anim: true })}
+    if (page.header) html += `<div class="phero-wrap"><div class="wrap"><header class="phero ${page.header.image ? "withimg" : ""}" style="${img(page.header.image)}">${page.header.image ? credit(page.header.credit, page.header.creditLink) : ""}${canvas({ seed: page.id.length * 3, scale: .0035, levels: 14, alpha: .35, anim: true })}
         ${page.header.eyebrow ? `<span class="pill-label rv">${h(page.header.eyebrow)}</span>` : ""}
         <h1 class="rv d1">${md(page.header.title || page.menu)}</h1>${page.header.text ? `<p class="rv d2">${h(page.header.text)}</p>` : ""}
         <div class="crumbs">Indico Insights / ${h(page.menu)}</div></header></div></div>`;
