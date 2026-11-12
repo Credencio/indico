@@ -1,7 +1,7 @@
 /* ============================================================
    CONTEÚDO DO SITE INDICO INSIGHTS
-   Gerido pela página de gestão (admin.html). Não precisa de editar à mão.
-   Última actualização: 2026-11-12T14:17:01.753Z
+   Este ficheiro é gerado e actualizado pela página de gestão (admin.html).
+   Não precisa de o editar à mão.
    ============================================================ */
 window.SITE = {
   "defaultLanguage": "pt",
@@ -164,8 +164,8 @@ window.SITE = {
           "slides": [
             {
               "label": {
-                "pt": "Indico Insights · Maputo",
-                "en": "Indico Insights · Maputo"
+                "pt": "Florestas de miombo · Moçambique",
+                "en": "Miombo woodlands · Mozambique"
               },
               "title": {
                 "pt": "Do satélite ao terreno, *dados* que protegem florestas, mangais e clima.",
@@ -175,19 +175,20 @@ window.SITE = {
                 "pt": "Transformamos dados em inteligência, e inteligência em decisões para a sustentabilidade. Observação da Terra, SIG, drones e sistemas digitais ao serviço de governos, parceiros de desenvolvimento e sector privado.",
                 "en": "We turn data into intelligence, and intelligence into decisions for sustainability. Earth Observation, GIS, drones and digital systems for governments, development partners and the private sector."
               },
-              "image": "",
+              "image": "imagens/hero-miombo-panorama.jpg",
               "button": {
                 "label": {
                   "pt": "Ver o nosso trabalho",
                   "en": "See our work"
                 },
                 "link": "#projectos"
-              }
+              },
+              "credit": "Foto: Credencio Maunze"
             },
             {
               "label": {
-                "pt": "Impacto · REDD+",
-                "en": "Impact · REDD+"
+                "pt": "Monitoria do desmatamento · REDD+",
+                "en": "Deforestation monitoring · REDD+"
               },
               "title": {
                 "pt": "US$ 7,6 milhões em pagamentos por *resultados* REDD+.",
@@ -197,14 +198,15 @@ window.SITE = {
                 "pt": "O nosso sistema de monitoria florestal sustenta o reporte de Moçambique à CQNUAC, com metodologia validada pela Aster Global.",
                 "en": "Our forest monitoring system underpins Mozambique's reporting to the UNFCCC, with methodology validated by Aster Global."
               },
-              "image": "",
+              "image": "imagens/hero-desmatamento.jpg",
               "button": {
                 "label": {
                   "pt": "Saiba mais",
                   "en": "Learn more"
                 },
                 "link": "#impacto"
-              }
+              },
+              "credit": "Foto: Credencio Maunze"
             },
             {
               "label": {
@@ -219,14 +221,15 @@ window.SITE = {
                 "pt": "Comunidades validam eventos de desmatamento quase em tempo real com ferramentas móveis, e a informação fica pública em painéis.",
                 "en": "Communities validate deforestation events in near real time with mobile tools, and the data is published in open dashboards."
               },
-              "image": "",
+              "image": "imagens/hero-comunidade.jpg",
               "button": {
                 "label": {
                   "pt": "Ver o projecto",
                   "en": "See the project"
                 },
                 "link": "#projectos"
-              }
+              },
+              "credit": "Foto: Credencio Maunze"
             }
           ]
         },
@@ -339,7 +342,7 @@ window.SITE = {
           "type": "services",
           "style": "bento",
           "limit": 4,
-          "image": "",
+          "image": "imagens/miombo-vertical.jpg",
           "title": {
             "pt": "Os nossos serviços",
             "en": "Our services"
@@ -354,7 +357,8 @@ window.SITE = {
               "en": "See all services →"
             },
             "href": "#servicos"
-          }
+          },
+          "credit": "Foto: Credencio Maunze"
         },
         {
           "type": "checklist",
@@ -419,7 +423,7 @@ window.SITE = {
         },
         {
           "type": "documents",
-          "limit": 4,
+          "limit": 3,
           "filters": false,
           "eyebrow": {
             "pt": "Publicações",
@@ -452,7 +456,9 @@ window.SITE = {
               "en": "Talk to us"
             },
             "link": "#contacto"
-          }
+          },
+          "image": "imagens/cta-regeneracao.jpg",
+          "credit": "Foto: Credencio Maunze"
         }
       ]
     },
@@ -470,7 +476,9 @@ window.SITE = {
         "title": {
           "pt": "Uma empresa moçambicana com *olhos no céu* e pés na terra.",
           "en": "A Mozambican company with *eyes in the sky* and feet on the ground."
-        }
+        },
+        "image": "imagens/cab-sobre.jpg",
+        "credit": "Foto: Credencio Maunze"
       },
       "blocks": [
         {
@@ -666,7 +674,9 @@ window.SITE = {
         "text": {
           "pt": "Do mapeamento de mangais ao reporte climático nacional, cobrimos toda a cadeia: recolha, análise, sistemas e capacitação.",
           "en": "From mangrove mapping to national climate reporting, we cover the whole chain: collection, analysis, systems and capacity building."
-        }
+        },
+        "image": "imagens/cab-servicos.jpg",
+        "credit": "Foto: Credencio Maunze"
       },
       "blocks": [
         {
@@ -704,7 +714,9 @@ window.SITE = {
         "text": {
           "pt": "Clique num projecto para ver o contexto, a equipa e, quando disponível, aceder ao sistema em funcionamento.",
           "en": "Click a project to see the context, the team and, where available, open the live system."
-        }
+        },
+        "image": "imagens/cab-projectos.jpg",
+        "credit": "Foto: Credencio Maunze"
       },
       "blocks": [
         {
@@ -727,10 +739,8 @@ window.SITE = {
           "pt": "Os nossos dados sustentam o *REDD+* de Moçambique.",
           "en": "Our data underpins Mozambique's *REDD+*."
         },
-        "text": {
-          "pt": "",
-          "en": ""
-        }
+        "image": "imagens/cab-impacto.jpg",
+        "credit": "Foto: Credencio Maunze"
       },
       "blocks": [
         {
@@ -785,8 +795,7 @@ window.SITE = {
                 "en": "A Mozambican team that knows the terrain, the institutions and the local context."
               }
             }
-          ],
-          "bg": ""
+          ]
         },
         {
           "type": "projects",
@@ -803,18 +812,7 @@ window.SITE = {
           "title": {
             "pt": "Ver os projectos",
             "en": "See the projects"
-          },
-          "text": {
-            "pt": "",
-            "en": ""
-          },
-          "link": {
-            "label": {
-              "pt": "",
-              "en": ""
-            }
-          },
-          "bg": ""
+          }
         }
       ]
     },
@@ -836,7 +834,9 @@ window.SITE = {
         "text": {
           "pt": "Capas de relatórios e estudos produzidos pela Indico Insights. Por razões de confidencialidade, os documentos completos estão disponíveis apenas mediante pedido.",
           "en": "Covers of reports and studies produced by Indico Insights. For confidentiality reasons, full documents are available on request only."
-        }
+        },
+        "image": "imagens/cab-documentos.jpg",
+        "credit": "Foto: Credencio Maunze"
       },
       "blocks": [
         {
@@ -1075,7 +1075,9 @@ window.SITE = {
       "text": {
         "pt": "Geração da linha de base de desflorestação de Moçambique no âmbito da metodologia VM0048 e do módulo VMD0055 da Verra (Desmatamento Não Planeado Evitado): mapas de referência de cobertura florestal, dados de actividade de desflorestação, delineação das áreas disponíveis e estimativa do factor de emissão fora do leakage belt. Estes dados permitem à Verra alocar o risco de desmatamento aos projectos de carbono do país.",
         "en": "Development of Mozambique's deforestation baseline under Verra's VM0048 methodology and VMD0055 module (Avoided Unplanned Deforestation): forest cover reference maps, deforestation activity data, delineation of available areas and estimation of the emission factor outside the leakage belt. These data allow Verra to allocate deforestation risk to the country's carbon projects."
-      }
+      },
+      "image": "imagens/proj-verra.jpg",
+      "credit": "Foto: Credencio Maunze"
     },
     {
       "id": "anexo",
@@ -1096,7 +1098,9 @@ window.SITE = {
       "text": {
         "pt": "Assistência técnica ao Governo, através do Ministério da Terra e Ambiente, para avaliar as emissões de gases com efeito de estufa do sector florestal e preparar o Anexo Técnico REDD+ da 2ª Actualização Bienal, que sustenta o acesso a pagamentos por resultados. Inclui metodologias robustas de monitoria do carbono florestal e a análise das séries de emissões de 2017 a 2020.",
         "en": "Technical assistance to the Government, through the Ministry of Land and Environment, to assess forest-sector greenhouse gas emissions and prepare the REDD+ Technical Annex to the 2nd Biennial Update Report, which underpins access to results-based payments. Includes robust forest carbon monitoring methods and analysis of the 2017–2020 emission series."
-      }
+      },
+      "image": "imagens/proj-anexo.jpg",
+      "credit": "Foto: Credencio Maunze"
     },
     {
       "id": "angola-mrv",
@@ -1189,7 +1193,9 @@ window.SITE = {
       "text": {
         "pt": "Mapeia eventos de desmatamento e degradação florestal e gera as estimativas de área que alimentam o cálculo das emissões. Serviu de base ao Nível de Referência de Emissões Florestais (2018) e ao 1º Relatório de Actualização Bienal (2022) submetidos à CQNUAC, e apoiou o primeiro programa de pagamentos por resultados de REDD+ do país: US$ 7,6 milhões entre 2021 e 2022. Metodologia validada por auditoria internacional da Aster Global.",
         "en": "Maps deforestation and forest degradation events and produces the area estimates that feed emission calculations. It underpinned the Forest Reference Emission Level (2018) and the 1st Biennial Update Report (2022) submitted to the UNFCCC, and supported the country's first REDD+ results-based payments programme: US$ 7.6 million in 2021–2022. Methodology validated by an international audit by Aster Global."
-      }
+      },
+      "image": "imagens/proj-gee.jpg",
+      "credit": "Foto: Credencio Maunze"
     },
     {
       "id": "pmrv",
@@ -1215,7 +1221,9 @@ window.SITE = {
       "text": {
         "pt": "As comunidades, que conhecem os seus limites, monitorizam o desmatamento quase em tempo real, validam eventos e registam as suas causas com ArcGIS Survey123 e Field Maps. A informação fica disponível ao público em painéis Power BI e ArcGIS e pode ser descarregada para análise, capacitando as comunidades para acções efectivas de controlo.",
         "en": "Communities, who know their own boundaries, monitor deforestation in near real time, validate events and record their causes with ArcGIS Survey123 and Field Maps. The information is publicly available in Power BI and ArcGIS dashboards and can be downloaded for analysis, empowering communities to take effective action."
-      }
+      },
+      "image": "imagens/proj-pmrv.jpg",
+      "credit": "Foto: Credencio Maunze"
     },
     {
       "id": "inspeccao",
@@ -1240,7 +1248,9 @@ window.SITE = {
       "text": {
         "pt": "Controlo eficiente do fluxo de produtos florestais madeireiros e não madeireiros: inspectores registam dados no campo com ArcGIS Survey123, e o sistema acompanha licenças, volumes licenciados e colhidos, multas e pagamentos. Os dados ficam numa base online com redundância em servidores internos, com relatórios em tempo real para decisores e partes interessadas.",
         "en": "Efficient control of the flow of timber and non-timber forest products: inspectors record field data with ArcGIS Survey123, and the system tracks licences, licensed and harvested volumes, fines and payments. Data are stored online with redundancy on internal servers, with real-time reports for decision-makers and stakeholders."
-      }
+      },
+      "image": "imagens/proj-inspeccao.jpg",
+      "credit": "Foto: Credencio Maunze"
     },
     {
       "id": "sustain",
@@ -1261,7 +1271,9 @@ window.SITE = {
       "text": {
         "pt": "Diagnóstico e apoio à operacionalização de um sistema de MRV orientado para a agricultura sustentável e gestão de paisagens produtivas. O trabalho abrange a avaliação de sistemas de monitoria, análise e organização de dados ambientais, identificação de indicadores e desenvolvimento de recomendações e instrumentos técnicos para apoiar a monitoria de resultados e a tomada de decisão.",
         "en": "Assessment and support for operationalising an MRV system for sustainable agriculture and productive landscape management. The work covers evaluating monitoring systems, analysing and organising environmental data, identifying indicators, and developing recommendations and technical tools to support results monitoring and decision-making."
-      }
+      },
+      "image": "imagens/proj-sustain.jpg",
+      "credit": "Foto: Credencio Maunze"
     }
   ],
   "clientsTitle": {
@@ -1279,8 +1291,8 @@ window.SITE = {
       "en": "Ministry of Land and Environment"
     },
     {
-      "pt": "PNUD Angola",
-      "en": "UNDP Angola"
+      "pt": "PNUD",
+      "en": "UNDP"
     },
     {
       "pt": "Fundo Nacional para o Desenvolvimento Sustentável",
@@ -1293,18 +1305,6 @@ window.SITE = {
     {
       "pt": "Ministério do Ambiente de Angola",
       "en": "Ministry of Environment of Angola"
-    },
-    {
-      "pt": "GIZ",
-      "en": "GIZ"
-    },
-    {
-      "pt": "Lomassul",
-      "en": "Lomassul"
-    },
-    {
-      "pt": "",
-      "en": ""
     }
   ],
   "documents": [
@@ -1563,7 +1563,7 @@ window.SITE = {
     }
   ],
   "admin": {
-    "repo": "Credencio/indico",
+    "repo": "",
     "branch": "main"
   }
 };
