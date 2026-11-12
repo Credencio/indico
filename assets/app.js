@@ -126,7 +126,16 @@
     },
 
     documents: b => {
-      const docs = vis(S.documents).slice(0, b.limit || 999);
+      let docs = vis(S.documents);
+      if (b.only && b.only.length) docs = b.only.map(id => docs.find(d => d.id === id)).filter(Boolean);
+      if (b.exclude && b.exclude.length) docs = docs.filter(d => !b.exclude.includes(d.id));
+      docs = docs.slice(0, b.limit || 999);
+      if (b.style === "feature") return sec(b, head(b) + docs.map(d => `<div class="docfeat rv">
+          <button class="cv" data-doc="${S.documents.indexOf(d)}">${d.cover ? `<img src="${esc(d.cover)}" alt="${h(d.title)}" loading="lazy">` : ""}</button>
+          <div><span class="eyebrow">${h(d.category)}</span><h3>${h(d.title)}</h3><p>${h(d.text)}</p>
+            <div class="meta">${[d.language, d.pages ? d.pages + " " + t(U.pagesCount).toLowerCase() : "", d.year].filter(Boolean).map(esc).join(" · ")}</div>
+            <div class="btns">${d.download ? `<a class="btn btn-sun" href="${href(d.download)}" target="_blank" rel="noopener" download>${ic("down", 18, 2.2)} ${h(U.download)}</a>` : ""}
+            <button class="btn btn-line" data-doc="${S.documents.indexOf(d)}">${ic("eye", 16)} ${h(U.view)}</button></div></div></div>`).join(""));
       const cats = [...new Set(docs.map(d => t(d.category)).filter(Boolean))];
       const filters = b.filters && cats.length > 1 ? `<div class="filters rv"><button class="chip on" data-dc="all">${h(U.all)}</button>${cats.map(c => `<button class="chip" data-dc="${esc(c)}">${esc(c)}</button>`).join("")}</div>` : "";
       return sec(b, head(b) + (docs.length ? filters + `<div class="doc-grid">${docs.map(docCard).join("")}</div>` : `<div class="empty">${h(U.noDocs)}</div>`));
@@ -252,7 +261,7 @@
       grid.querySelectorAll(".proj").forEach(p => p.classList.toggle("hide", !(f === "all" || p.dataset.country === f || p.dataset.tags.split(" ").includes(f))));
     }));
     document.querySelectorAll(".proj").forEach(c => c.addEventListener("click", () => openProject(c.dataset.id)));
-    document.querySelectorAll(".docc").forEach(c => c.addEventListener("click", () => openDoc(+c.dataset.doc)));
+    document.querySelectorAll(".docc, .docfeat [data-doc]").forEach(c => c.addEventListener("click", () => openDoc(+c.dataset.doc)));
 
     const form = document.getElementById("form");
     if (form) form.addEventListener("submit", e => {

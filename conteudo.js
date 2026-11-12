@@ -1,7 +1,7 @@
 /* ============================================================
    CONTEÚDO DO SITE INDICO INSIGHTS
-   Gerido pela página de gestão (admin.html). Não precisa de editar à mão.
-   Última actualização: 2026-11-12T14:47:52.800Z
+   Este ficheiro é gerado e actualizado pela página de gestão (admin.html).
+   Não precisa de o editar à mão.
    ============================================================ */
 window.SITE = {
   "defaultLanguage": "pt",
@@ -439,7 +439,10 @@ window.SITE = {
               "en": "See all documents →"
             },
             "href": "#documentos"
-          }
+          },
+          "exclude": [
+            "perfil-institucional"
+          ]
         },
         {
           "type": "clients"
@@ -478,11 +481,7 @@ window.SITE = {
           "en": "A Mozambican company with *eyes in the sky* and feet on the ground."
         },
         "image": "imagens/cab-sobre.jpg",
-        "credit": "Foto: Credencio Maunze",
-        "text": {
-          "pt": "",
-          "en": ""
-        }
+        "credit": "Foto: Credencio Maunze"
       },
       "blocks": [
         {
@@ -546,20 +545,24 @@ window.SITE = {
                 "en": "Participatory tools that give communities a voice."
               }
             }
+          ]
+        },
+        {
+          "type": "documents",
+          "style": "feature",
+          "only": [
+            "perfil-institucional"
           ],
+          "filters": false,
+          "bg": "white",
           "eyebrow": {
-            "pt": "",
-            "en": ""
+            "pt": "Perfil institucional",
+            "en": "Company profile"
           },
           "title": {
-            "pt": "",
-            "en": ""
-          },
-          "text": {
-            "pt": "",
-            "en": ""
-          },
-          "bg": ""
+            "pt": "Conheça-nos em *detalhe*.",
+            "en": "Get to know us in *detail*."
+          }
         },
         {
           "type": "duo",
@@ -666,16 +669,10 @@ window.SITE = {
               "pt": "Desenvolvimento de sistemas",
               "en": "Systems development"
             }
-          ],
-          "bg": ""
+          ]
         },
         {
-          "type": "clients",
-          "title": {
-            "pt": "",
-            "en": ""
-          },
-          "bg": ""
+          "type": "clients"
         }
       ]
     },
@@ -720,10 +717,10 @@ window.SITE = {
       ]
     },
     {
-      "id": "experiencia",
+      "id": "projectos",
       "menu": {
-        "pt": "Experiência",
-        "en": "Experience"
+        "pt": "Projectos",
+        "en": "Projects"
       },
       "header": {
         "eyebrow": {
@@ -743,26 +740,7 @@ window.SITE = {
       },
       "blocks": [
         {
-          "type": "projects",
-          "eyebrow": {
-            "pt": "",
-            "en": ""
-          },
-          "title": {
-            "pt": "",
-            "en": ""
-          },
-          "text": {
-            "pt": "",
-            "en": ""
-          },
-          "link": {
-            "label": {
-              "pt": "",
-              "en": ""
-            }
-          },
-          "bg": ""
+          "type": "projects"
         }
       ]
     },
@@ -883,7 +861,10 @@ window.SITE = {
       "blocks": [
         {
           "type": "documents",
-          "filters": true
+          "filters": true,
+          "exclude": [
+            "perfil-institucional"
+          ]
         }
       ]
     },
@@ -1372,7 +1353,8 @@ window.SITE = {
         "en": "Technical report (Deliverable 3) proposing a national MRV system for the electricity subsector."
       },
       "project": "angola-mrv",
-      "download": ""
+      "download": "",
+      "id": "mrv-angola-relatorio-tecnico"
     },
     {
       "cover": "documentos/capas/mrv-angola-plano-operacional.jpg",
@@ -1396,7 +1378,8 @@ window.SITE = {
         "en": "Plan for developing and implementing the electricity sector emissions MRV system."
       },
       "project": "angola-mrv",
-      "download": ""
+      "download": "",
+      "id": "mrv-angola-plano-operacional"
     },
     {
       "cover": "documentos/capas/mrv-angola-modelo-calculo.jpg",
@@ -1420,7 +1403,8 @@ window.SITE = {
         "en": "Calculation model for greenhouse gas emissions in the electricity sector."
       },
       "project": "angola-mrv",
-      "download": ""
+      "download": "",
+      "id": "mrv-angola-modelo-calculo"
     },
     {
       "cover": "documentos/capas/verra-dados-actividade.jpg",
@@ -1441,7 +1425,8 @@ window.SITE = {
         "en": "Progress report on jurisdictional activity data under VM0048 and VMD0055."
       },
       "project": "verra",
-      "download": ""
+      "download": "",
+      "id": "verra-dados-actividade"
     },
     {
       "cover": "documentos/capas/lomasul-pre-viabilidade.jpg",
@@ -1462,7 +1447,8 @@ window.SITE = {
         "en": "Pre-feasibility study for a REDD+ programme in Inhambane Province."
       },
       "project": "",
-      "download": ""
+      "download": "",
+      "id": "lomasul-pre-viabilidade"
     },
     {
       "cover": "documentos/capas/iucn-mapeamento-ecossistemas.jpg",
@@ -1486,7 +1472,8 @@ window.SITE = {
         "en": "Technical report mapping the ecosystems of four districts in Inhambane."
       },
       "project": "inhambane",
-      "download": ""
+      "download": "",
+      "id": "iucn-mapeamento-ecossistemas"
     },
     {
       "cover": "documentos/capas/iucn-portal-4-distritos.jpg",
@@ -1510,7 +1497,8 @@ window.SITE = {
         "en": "Final report on the development of the geospatial data portal."
       },
       "project": "inhambane",
-      "download": ""
+      "download": "",
+      "id": "iucn-portal-4-distritos"
     },
     {
       "cover": "documentos/capas/iucn-portal-resiliencia-costeira.jpg",
@@ -1534,7 +1522,8 @@ window.SITE = {
         "en": "Final report on the coastal resilience data portal."
       },
       "project": "inhambane",
-      "download": ""
+      "download": "",
+      "id": "iucn-portal-resiliencia-costeira"
     },
     {
       "cover": "documentos/capas/carvao-vegetal-relatorio-inicial.jpg",
@@ -1558,7 +1547,8 @@ window.SITE = {
         "en": "Inception report for the national charcoal certification mechanism."
       },
       "project": "carvao",
-      "download": ""
+      "download": "",
+      "id": "carvao-vegetal-relatorio-inicial"
     },
     {
       "cover": "documentos/capas/perfil-institucional.jpg",
@@ -1575,11 +1565,12 @@ window.SITE = {
       "language": "PT",
       "pages": 5,
       "text": {
-        "pt": "Quem somos, o que fazemos e os nossos projectos de referência.",
-        "en": "Who we are, what we do and our reference projects."
+        "pt": "Quem somos, o que fazemos, a nossa equipa e os nossos projectos de referência, num documento para descarregar.",
+        "en": "Who we are, what we do, our team and our reference projects, in one downloadable document (in Portuguese)."
       },
       "project": "",
-      "download": "documentos/Perfil_Indico_Insights.pdf"
+      "download": "documentos/Perfil_Indico_Insights.pdf",
+      "id": "perfil-institucional"
     }
   ],
   "tagline": {
@@ -1605,7 +1596,7 @@ window.SITE = {
     }
   ],
   "admin": {
-    "repo": "Credencio/indico",
+    "repo": "",
     "branch": "main"
   }
 };

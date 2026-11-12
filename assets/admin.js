@@ -259,6 +259,7 @@
   const btnGroup = (k = "button", l = "Botão") => ({ k, l, t: "group", of: [{ t: "cols", of: [{ k: "label", l: "Texto do botão", t: "bi" }, { k: "link", l: "Leva para", t: "link" }] }] });
   const headF = [{ k: "eyebrow", l: "Etiqueta (pequeno texto acima do título)", t: "bi" }, { k: "title", l: "Título", t: "bi", help: "Palavras entre *asteriscos* ficam destacadas a laranja." }, { k: "text", l: "Texto de introdução", t: "biarea" }];
   const linkF = { k: "link", l: "Link no canto (ex.: “Ver todos →”)", t: "group", of: [{ t: "cols", of: [{ k: "label", l: "Texto", t: "bi" }, { k: "href", l: "Leva para", t: "link" }] }] };
+  const docOpts = () => S.documents.map(d => { if (!d.id) d.id = "d-" + Math.random().toString(36).slice(2, 8); return [d.id, tx(d.title).slice(0, 48)]; });
   const projOpts = () => S.projects.map(p => [p.id, tx(p.title).slice(0, 48)]);
 
   const BLOCKS = {
@@ -284,7 +285,9 @@
       { t: "cols", of: [{ k: "filters", l: "Mostrar filtros", t: "bool", def: true }, { k: "limit", l: "Mostrar no máximo (vazio = todos)", t: "number" }] },
       { k: "only", l: "Mostrar apenas estes (nenhum seleccionado = todos)", t: "multi", o: projOpts }, linkF] },
     documents: { n: "Documentos (capas)", d: "Galeria de capas de relatórios", f: [...headF,
-      { t: "cols", of: [{ k: "filters", l: "Mostrar filtros por categoria", t: "bool", def: true }, { k: "limit", l: "Mostrar no máximo (vazio = todos)", t: "number" }] }, linkF] },
+      { k: "style", l: "Estilo", t: "select", o: [["grid", "Galeria de capas"], ["feature", "Destaque (capa grande + botões)"]] },
+      { t: "cols", of: [{ k: "filters", l: "Mostrar filtros por categoria", t: "bool", def: true }, { k: "limit", l: "Mostrar no máximo (vazio = todos)", t: "number" }] },
+      { k: "only", l: "Mostrar apenas estes (nenhum = todos)", t: "multi", o: docOpts }, { k: "exclude", l: "Esconder estes neste bloco", t: "multi", o: docOpts }, linkF] },
     clients: { n: "Clientes", d: "Faixa animada com os clientes", f: [{ k: "title", l: "Título (vazio = o definido em Geral)", t: "bi" }] },
     impact: { n: "Impacto", d: "Cartão escuro com número grande", f: [
       { k: "text", l: "Texto", t: "biarea" }, { k: "number", l: "Número em destaque", t: "text" }, { k: "after", l: "Texto depois do número", t: "biarea" },
@@ -466,7 +469,7 @@
           el("button", { class: "b danger", onclick: async () => { if (await ask("Apagar este documento?", "A capa deixa de aparecer no site quando publicar.", "Apagar", true)) { forgetFile(d.cover); forgetFile(d.download); S.documents.splice(S.documents.indexOf(d), 1); markDirty(); $("#dialog").classList.remove("open"); draw(); renderNav(); } } }, "Apagar documento")));
       drawer(isNew ? "Novo documento" : "Editar documento", body, () => { draw(); renderNav(); });
     };
-    const newDoc = () => { const d = Object.assign(defaults(DOCUMENT), { category: clone((S.documentCategories || [""])[0]), language: "PT", year: String(new Date().getFullYear()) }); S.documents.unshift(d); markDirty(); draw(); renderNav(); editDoc(d, true); };
+    const newDoc = () => { const d = Object.assign(defaults(DOCUMENT), { id: "d-" + Date.now().toString(36), category: clone((S.documentCategories || [""])[0]), language: "PT", year: String(new Date().getFullYear()) }); S.documents.unshift(d); markDirty(); draw(); renderNav(); editDoc(d, true); };
     const cats = el("div", { class: "panel" }, el("h2", {}, "Categorias de documentos"), el("p", { class: "hint" }, "Usadas nos filtros da página Documentos."));
     const holder = { c: S.documentCategories || (S.documentCategories = []) };
     cats.append(field({ k: "c", t: "bilist" }, holder));

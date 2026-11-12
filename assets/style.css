@@ -338,3 +338,14 @@ footer .bottom a{color:#6f877b}
 .ctaband.withimg{background-size:cover;background-position:center}
 .ctaband.withimg::before{content:"";position:absolute;inset:0;background:linear-gradient(120deg,rgba(6,106,58,.88),rgba(4,38,26,.72))}
 .ctaband .credit{position:absolute}
+
+.docfeat{display:grid;grid-template-columns:260px 1fr;gap:3rem;align-items:center;background:#fff;border:1px solid var(--line);border-radius:28px;padding:2.4rem;max-width:980px}
+.docfeat .cv{border:0;background:none;cursor:pointer;padding:0;transform:rotate(-3deg);transition:transform .4s}
+.docfeat .cv:hover{transform:rotate(0) translateY(-6px)}
+.docfeat .cv img{border-radius:6px 14px 14px 6px;box-shadow:0 30px 50px -24px rgba(4,38,26,.6);width:100%}
+.docfeat h3{font-size:clamp(1.6rem,3vw,2.2rem);margin:.6rem 0 .8rem}
+.docfeat p{color:var(--muted);font-size:1.05rem}
+.docfeat .meta{color:var(--muted);font-size:.85rem;margin:.8rem 0 1.4rem}
+.docfeat .btns .btn-line{padding:.9rem 1.4rem;font-size:.95rem}
+@media (max-width:760px){.docfeat{grid-template-columns:1fr;padding:1.6rem;gap:1.6rem}.docfeat .cv{max-width:200px}}
+.bg-white .docfeat{background:var(--bg);border-color:transparent}
