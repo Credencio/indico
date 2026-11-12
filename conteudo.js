@@ -1,7 +1,7 @@
 /* ============================================================
    CONTEÚDO DO SITE INDICO INSIGHTS
    Gerido pela página de gestão (admin.html). Não precisa de editar à mão.
-   Última actualização: 2026-11-12T14:39:08.245Z
+   Última actualização: 2026-11-12T14:44:36.681Z
    ============================================================ */
 window.SITE = {
   "defaultLanguage": "pt",
@@ -478,7 +478,11 @@ window.SITE = {
           "en": "A Mozambican company with *eyes in the sky* and feet on the ground."
         },
         "image": "imagens/cab-sobre.jpg",
-        "credit": "Foto: Credencio Maunze"
+        "credit": "Foto: Credencio Maunze",
+        "text": {
+          "pt": "",
+          "en": ""
+        }
       },
       "blocks": [
         {
@@ -542,7 +546,20 @@ window.SITE = {
                 "en": "Participatory tools that give communities a voice."
               }
             }
-          ]
+          ],
+          "eyebrow": {
+            "pt": "",
+            "en": ""
+          },
+          "title": {
+            "pt": "",
+            "en": ""
+          },
+          "text": {
+            "pt": "",
+            "en": ""
+          },
+          "bg": ""
         },
         {
           "type": "duo",
@@ -649,10 +666,41 @@ window.SITE = {
               "pt": "Desenvolvimento de sistemas",
               "en": "Systems development"
             }
-          ]
+          ],
+          "bg": ""
         },
         {
-          "type": "clients"
+          "type": "clients",
+          "title": {
+            "pt": "",
+            "en": ""
+          },
+          "bg": ""
+        },
+        {
+          "type": "documents",
+          "eyebrow": {
+            "pt": "Nosso Perfil",
+            "en": "Our Profile"
+          },
+          "title": {
+            "pt": "Perfil Institucional da Indico Insights",
+            "en": "Indico Insights Company Profile"
+          },
+          "text": {
+            "pt": "",
+            "en": ""
+          },
+          "filters": false,
+          "limit": "",
+          "link": {
+            "label": {
+              "pt": "",
+              "en": ""
+            },
+            "href": ""
+          },
+          "bg": ""
         }
       ]
     },
