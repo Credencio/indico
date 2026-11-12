@@ -1,7 +1,7 @@
 /* ============================================================
    CONTEÚDO DO SITE INDICO INSIGHTS
    Gerido pela página de gestão (admin.html). Não precisa de editar à mão.
-   Última actualização: 2026-11-12T14:15:09.748Z
+   Última actualização: 2026-11-12T14:17:01.753Z
    ============================================================ */
 window.SITE = {
   "defaultLanguage": "pt",
@@ -1279,8 +1279,8 @@ window.SITE = {
       "en": "Ministry of Land and Environment"
     },
     {
-      "pt": "PNUD",
-      "en": "UNDP"
+      "pt": "PNUD Angola",
+      "en": "UNDP Angola"
     },
     {
       "pt": "Fundo Nacional para o Desenvolvimento Sustentável",
@@ -1301,6 +1301,10 @@ window.SITE = {
     {
       "pt": "Lomassul",
       "en": "Lomassul"
+    },
+    {
+      "pt": "",
+      "en": ""
     }
   ],
   "documents": [
