@@ -1,11 +1,11 @@
 /* ============================================================
    CONTEÚDO DO SITE INDICO INSIGHTS
-   Este ficheiro é gerado e actualizado pela página de gestão (admin.html).
-   Não precisa de o editar à mão.
+   Gerido pela página de gestão (admin.html). Não precisa de editar à mão.
+   Última actualização: 2026-11-12T13:39:44.720Z
    ============================================================ */
 window.SITE = {
   "defaultLanguage": "pt",
-  "email": "admin@indicoinsights.co.mz",
+  "email": "admin@indicoinsights.com",
   "address": {
     "pt": "Maputo, Moçambique",
     "en": "Maputo, Mozambique"
@@ -726,6 +726,10 @@ window.SITE = {
         "title": {
           "pt": "Os nossos dados sustentam o *REDD+* de Moçambique.",
           "en": "Our data underpins Mozambique's *REDD+*."
+        },
+        "text": {
+          "pt": "",
+          "en": ""
         }
       },
       "blocks": [
@@ -781,7 +785,8 @@ window.SITE = {
                 "en": "A Mozambican team that knows the terrain, the institutions and the local context."
               }
             }
-          ]
+          ],
+          "bg": ""
         },
         {
           "type": "projects",
@@ -798,7 +803,18 @@ window.SITE = {
           "title": {
             "pt": "Ver os projectos",
             "en": "See the projects"
-          }
+          },
+          "text": {
+            "pt": "",
+            "en": ""
+          },
+          "link": {
+            "label": {
+              "pt": "",
+              "en": ""
+            }
+          },
+          "bg": ""
         }
       ]
     },
@@ -1535,7 +1551,7 @@ window.SITE = {
     }
   ],
   "admin": {
-    "repo": "",
+    "repo": "Credencio/indico",
     "branch": "main"
   }
 };
